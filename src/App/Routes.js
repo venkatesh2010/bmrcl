@@ -12,22 +12,22 @@ const UniversalComponent = universal(props => import(`../Views/${props.page}`), 
 	loading: () => <Loading />,
 });
 
-export const routes =  [
-  {
-    exact: true,
-    path: "/:lang",
-    page: "Home",
-  },
-  {
-    exact: true,
-    path: "/:lang/about",
-    page: "About",
-  },
-  {
-    exact: true,
-    path: "/:lang/article",
-    page: "Article",
-  },
+export const routes = [
+	{
+		exact: true,
+		path: '/:lang',
+		page: 'Home',
+	},
+	{
+		exact: true,
+		path: '/:lang/about',
+		page: 'About',
+	},
+	{
+		exact: true,
+		path: '/:lang/article',
+		page: 'Article',
+	},
 ];
 
 export default ({ staticContext, lang }) => (
@@ -47,7 +47,7 @@ export default ({ staticContext, lang }) => (
 				<Route
 					key={route.path}
 					render={routeProps => <UniversalComponent page={route.page} {...routeProps} />}
-					{ ...route }
+					{...route}
 				/>
 			))}
 			<RedirectWithStatus status={301} exact from="/" to={`/${lang}`} />
