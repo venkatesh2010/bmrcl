@@ -20,7 +20,7 @@ export default ({ staticContext, lang }) => (
 	<Fragment>
 		{isProd ? <GoogleTagManager gtmId="GTM-WFTXGC8" /> : ''}
 		<Head />
-		<Nav lang={lang} />
+		{/* <Nav lang={lang} /> */}
 		<Switch>
 			<Route
 				exact
@@ -35,6 +35,6 @@ export default ({ staticContext, lang }) => (
 			<RedirectWithStatus status={301} exact from="/" to={`/${lang}`} />
 			<Route render={routeProps => <UniversalComponent page="NotFound" {...routeProps} />} />
 		</Switch>
-		<Footer />
+		{/* <Footer /> */}
 	</Fragment>
 );

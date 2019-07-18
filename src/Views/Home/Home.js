@@ -26,27 +26,29 @@ class Home extends Component {
 		const { lang } = this.props.match.params;
 
 		return (
-			<Fragment>
-				<Head />
-				<ContentPusher>
-					<Container>
-						<Readable>
-							{lang === 'en' && (
-								<div
-									className={styles.content}
-									dangerouslySetInnerHTML={{ __html: dataEn.__content }}
-								/>
-							)}
-							{lang === 'de' && (
-								<div
-									className={styles.content}
-									dangerouslySetInnerHTML={{ __html: dataDe.__content }}
-								/>
-							)}
-						</Readable>
-					</Container>
-				</ContentPusher>
-			</Fragment>
+				<div className={styles.container} >Home Page</div>
+			
+			// <Fragment>
+			// 	<Head />
+			// 	<ContentPusher>
+			// 		<Container>
+			// 			<Readable>
+			// 				{lang === 'en' && (
+			// 					<div
+			// 						className={styles.content}
+			// 						dangerouslySetInnerHTML={{ __html: dataEn.__content }}
+			// 					/>
+			// 				)}
+			// 				{lang === 'de' && (
+			// 					<div
+			// 						className={styles.content}
+			// 						dangerouslySetInnerHTML={{ __html: dataDe.__content }}
+			// 					/>
+			// 				)}
+			// 			</Readable>
+			// 		</Container>
+			// 	</ContentPusher>
+			// </Fragment>
 		);
 	}
 }
